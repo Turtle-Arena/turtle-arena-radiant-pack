@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<!-- modify at your own risks -->
+<game
+  type="q3"
+  index="1"
+  name="Extraordinary Beat X"
+  enginepath_win32="C:/Program Files/Extraordinary Beat X/"
+  enginepath_linux="/usr/local/games/ebx/"
+  enginepath_macos="/Applications/EBX/"
+  engine_win32="spearmint.x86.exe"
+  engine_linux="spearmint_x86"
+  engine_macos="Spearmint.app"
+  prefix=".spearmint"
+  basegame="baseebx"
+  basegamename="Extraordinary Beat X"
+  unknowngamename="Custom EBX modification"
+  shaderpath="scripts"
+  archivetypes="pk3"
+  texturetypes="tga jpg png"
+  modeltypes="md3 ase lwo obj 3ds picoterrain"
+  maptypes="mapq3"
+  shaders="quake3"
+  entityclass="quake3"
+  entityclasstype="def xml"
+  entities="quake3"
+  brushtypes="quake3"
+  patchtypes="quake3"
+/>
