@@ -3,9 +3,16 @@
 build commands
 [RadiantPath]: path to Radiant .. C:\Program Files\NetRadiant\
 [EnginePath]: path to the engine .. C:\Program Files\EBX\ /usr/local/games/ebx/
+[ExecutableType]: x86.exe (Windows) or x86 (Linux)
+[MonitorAddress]: for print log to radiant console
+[GameName]: game mod directory .. baseq3
+
+netradiant build commands
+[ExtraQ3map2Args]: used for extra pak search paths (-fs_pakpath "/example/path/" -fs_pakpath "/example/path2/")
+[UserEnginePath]: path to the engine home directory
 -->
 <project version="2.0">
-<var name="q3map2">"[RadiantPath]q3map2.[ExecutableType]" -v<cond value="[MonitorAddress]"> -connect [MonitorAddress]</cond> -game quake3 -fs_basepath "[EnginePath]"<cond value="[GameName]"> -fs_game [GameName]</cond></var>
+<var name="q3map2">"[RadiantPath]q3map2.[ExecutableType]"<cond value="[ExtraQ3map2Args]"> [ExtraQ3map2Args]</cond> -v<cond value="[MonitorAddress]"> -connect [MonitorAddress]</cond> -game quake3 -fs_basepath "[EnginePath]"<cond value="[UserEnginePath]"> -fs_homepath "[UserEnginePath]"</cond><cond value="[GameName]"> -fs_game [GameName]</cond></var>
 <build name="Q3Map2: (single) BSP -meta -custinfoparms -flares">
 <command>[q3map2] -meta -custinfoparms -flares "[MapFile]"</command>
 </build>
